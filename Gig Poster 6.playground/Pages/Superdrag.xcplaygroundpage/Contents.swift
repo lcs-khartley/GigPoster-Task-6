@@ -52,17 +52,13 @@ canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
 canvas.drawShapesWithFill = false
 canvas.drawShapesWithBorders = true
 
-// Make first circle
-
+// Default border width for all circles
 canvas.defaultBorderWidth = 400/34
 
-
-
 // Draw the white circles
-
 canvas.borderColor = offWhite
-
 var length = 12
+
 for _ in 1...9 {
     
         canvas.drawEllipse(at: Point(x: 200, y: 400), width: length, height: length)
@@ -71,7 +67,6 @@ for _ in 1...9 {
 }
 
 // Draw the pink circles
-
 canvas.borderColor = translucentPink
 length = 12
 
@@ -81,6 +76,12 @@ for _ in 1...9 {
     
     length += 47
 }
+
+// Draw title
+
+canvas.drawText(message: "superdrag", at: Point(x: 20, y: 90), size: 50, kerning: 1.0)
+
+
 /*:
  ## Use Source Control
  
