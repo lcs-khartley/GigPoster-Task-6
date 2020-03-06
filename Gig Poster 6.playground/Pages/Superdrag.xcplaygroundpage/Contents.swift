@@ -44,9 +44,43 @@ let translucentPink = Color(hue: 325, saturation: 100, brightness: 81, alpha: 75
 let black = Color(hue: 0, saturation: 100, brightness: 0, alpha: 100)
 
 // Begin your solution here...
+// Make background Colour
+canvas.fillColor = lightBlue
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 400, height: 600)
+
+// Make circles only border
+canvas.drawShapesWithFill = false
+canvas.drawShapesWithBorders = true
+
+// Make first circle
+
+canvas.defaultBorderWidth = 400/34
 
 
 
+// Draw the white circles
+
+canvas.borderColor = offWhite
+
+var length = 12
+for _ in 1...9 {
+    
+        canvas.drawEllipse(at: Point(x: 200, y: 400), width: length, height: length)
+    
+    length += 47
+}
+
+// Draw the pink circles
+
+canvas.borderColor = translucentPink
+length = 12
+
+for _ in 1...9 {
+    
+        canvas.drawEllipse(at: Point(x: 200, y: 500), width: length, height: length)
+    
+    length += 47
+}
 /*:
  ## Use Source Control
  
@@ -60,5 +94,3 @@ let black = Color(hue: 0, saturation: 100, brightness: 0, alpha: 100)
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
  */
 PlaygroundPage.current.liveView = canvas
-
-
