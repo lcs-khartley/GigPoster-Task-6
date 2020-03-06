@@ -26,9 +26,9 @@ import PlaygroundSupport
  ## Use Source Control
  
  To create evidence that supports your case for exceeding expectations for thread 3:
-
+ 
  * You *must* commit and push regularly ... *not* just at the end of this task.
-
+ 
  * You *must* complete your work prior to 1:00 PM on Friday, March 6, 2020.
  
  Good luck! You've got this! 👊🏻👊🏼👊🏽👊🏾👊🏿
@@ -61,7 +61,7 @@ var length = 12
 
 for _ in 1...9 {
     
-        canvas.drawEllipse(at: Point(x: 200, y: 400), width: length, height: length)
+    canvas.drawEllipse(at: Point(x: 200, y: 400), width: length, height: length)
     
     length += 47
 }
@@ -72,7 +72,7 @@ length = 12
 
 for _ in 1...9 {
     
-        canvas.drawEllipse(at: Point(x: 200, y: 500), width: length, height: length)
+    canvas.drawEllipse(at: Point(x: 200, y: 500), width: length, height: length)
     
     length += 47
 }
@@ -82,15 +82,47 @@ for _ in 1...9 {
 canvas.drawText(message: "superdrag", at: Point(x: 20, y: 90), size: 50, kerning: 1.0)
 
 
+// Draw left text
+var text:[String] = ["with","the shambles", "and lifter"]
+var number = 0
+
+for y in stride(from: 50, through: 20, by: -15){
+
+    canvas.drawText(message: text[number], at: Point(x: 20, y: y), size: 8, kerning: 0.0)
+
+    number += 1
+}
+
+// Draw middle text
+var text2:[String] = ["thursday","june 13, 1996 / 8:30", "no age limit"]
+number = 0
+
+for y in stride(from: 50, through: 20, by: -15){
+
+    canvas.drawText(message: text2[number], at: Point(x: 110, y: y), size: 8, kerning: 0.0)
+
+    number += 1
+}
+
+// Draw last text
+var text3:[String] = ["at briek by briek","1130 buenos aveue", "san diego, ca"]
+number = 0
+
+for y in stride(from: 50, through: 20, by: -15){
+
+    canvas.drawText(message: text3[number], at: Point(x: 300, y: y), size: 8, kerning: 0.0)
+
+    number += 1
+}
 /*:
  ## Use Source Control
  
  To create evidence that supports your case for exceeding expectations for thread 3:
-
+ 
  * You *must* commit and push regularly ... *not* just at the end of this task.
-
+ 
  * You *must* complete your work prior to 1:00 PM on Friday, March 6, 2020.
-
+ 
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
  */
